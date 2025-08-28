@@ -1,11 +1,14 @@
 // const { app, BrowserWindow } = require('electron')
-import { app, BrowserWindow } from "electron";
-
+const { app, BrowserWindow } = require('electron/main')
+const path = require('node:path')
 const createWindow = () => {
 // BrowserWindows can only be created after the app module's ready event is fired
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
   })
 
   win.loadFile('index.html')
