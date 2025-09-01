@@ -1,3 +1,6 @@
+### 项目介绍: 
+  搭建一个简易的electron项目
+
 ### 知识点记录：
   - Electron exposes app.whenReady() as a helper specifically for the ready event to avoid subtle pitfalls with directly listening to that event in particular. See electron/electron#21972 for details.
   - Quit the app when all windows are closed (Windows & Linux)
