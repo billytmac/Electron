@@ -2,6 +2,14 @@
 ### 项目介绍
   使用Electron Forge分发打包工具搭建一个简易项目
 
+### 问题解决：
+  - pnpm publish时遇到“Error: Failed to locate module "debug" from "/Users/.../electron-forge-template/node_modules/electron-squirrel-startup"
+    .npmrc文件里添加以下代码
+    ```
+      node-linker=hoisted
+      public-hoist-pattern=*
+    ```
+    相关issues：https://github.com/electron/forge/issues/2633#issuecomment-1174790013
 ### 知识点记录
   - tag与release分支的区别
     https://babyking.github.io/wiki/%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD/2019-12-25-git-zhong-tag-yu-release-de-chuang-jian-yi-ji-liang-zhe-de-qu-bie/
