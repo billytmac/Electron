@@ -107,6 +107,8 @@ dist
 # Serverless directories
 .serverless/
 
+pnpm-lock.yaml
+
 # FuseBox cache
 .fusebox/
 
