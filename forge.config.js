@@ -45,4 +45,19 @@ module.exports = {
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
   ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'billytmac',
+          name: 'Electron'
+        },
+        prerelease: false,
+        draft: false,
+        // 需先设置export GITHUB_TOKEN=""
+        authToken: process.env.GITHUB_TOKEN
+      },
+    }
+  ]
 };
