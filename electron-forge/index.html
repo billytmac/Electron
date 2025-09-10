@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <!-- 加unsafe-inline可以解决csp限制的问题 -->
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <!-- 加unsafe-inline可以解决csp限制的问题 -->
+    <title>Hello from Electron renderer!</title>
+  </head>
+  <body>
+    <h1>Hello from Electron renderer!</h1>
+    <p>👋</p>
+    <p id="info"></p>
+    <p>尝试用update-electron-app监听更新, 5分钟之后自动更新</p>
+    <button id="test-update-btn">测试更新检查</button>
+    <button id="show-log-btn">查看日志文件路径</button>
+  </body>
+  <script src="./renderer.js"></script>
+</html>
