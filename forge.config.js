@@ -7,18 +7,26 @@ module.exports = {
   },
   rebuildConfig: {},
   makers: [
-    // {
-    //   name: '@electron-forge/maker-squirrel',
-    //   config: {},
-    // },
     {
-      name: '@electron-forge/maker-zip',
-      platforms: ['win32'],
+      name: '@electron-forge/maker-squirrel',
       config: {
         authors: 'billy',
         description: 'test electron',
+        // 确保生成正确的 Squirrel 文件
+        name: 'electron',
+        setupExe: 'electron-setup.exe',
+        setupMsi: 'electron-setup.msi'
       },
     },
+    // 暂时禁用 ZIP maker，因为 Squirrel 不支持 .zip 文件更新
+    // {
+    //   name: '@electron-forge/maker-zip',
+    //   platforms: ['win32'],
+    //   config: {
+    //     authors: 'billy',
+    //     description: 'test electron',
+    //   },
+    // },
     // {
     //   name: '@electron-forge/maker-deb',
     //   config: {},
