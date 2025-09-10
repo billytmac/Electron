@@ -1,5 +1,6 @@
 ### 项目介绍: 
-  搭建一个简易的electron项目
+  - main分支：搭建一个简易的electron项目
+  - electron-forge：用electron-forge搭建一个简单的用update-electron-app监听仓库realease版本来更新开发  
 
 ### 知识点记录：
   - Electron exposes app.whenReady() as a helper specifically for the ready event to avoid subtle pitfalls with directly listening to that event in particular. See electron/electron#21972 for details.
@@ -14,7 +15,7 @@
   - 用 cnpm 源下载  
 
 2. 用 npm 启动成功，用 pnpm 启动会报错问题：
-  以下操作都在 A 路径下操作：node_modules/.pnpm/electron@37.4.0/node_modules/electron
+  在A路径（node_modules/.pnpm/electron@37.4.0/node_modules/electron）下执行以下操作：
     - 自动安装：node install.js
     - 如自动安装失败，可尝试手动安装：
       - 可在https://github.com/electron/electron/releases/tag/v37.4.0 下选择对应 electron-xxxx-xxx.zip 格式版本进行下载，如 electron-v37.4.0-win32-arm64.zip，将下载的 zip 文件放在 A 路径下
