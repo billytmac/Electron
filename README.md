@@ -10,7 +10,7 @@
         public-hoist-pattern=*
       ```
     相关issues：https://github.com/electron/forge/issues/2633#issuecomment-1174790013
-  - 本地打包控制台有乱码问题
+  - 本地运行控制台有乱码问题
       需在package.json里加上 chcp 65001，如：
       ```
         "start": "chcp 65001 && electron-forge start",
@@ -21,7 +21,9 @@
   - 使用update-electron-app无法监听到更新
       - 开发环境下无法监听，需在打包后的环境（否则会报“Can not find Squirrel”）
       - maker需为Squirrel.Windows格式，并禁用ZIP格式，因为Squirrel格式里不支持zip格式的更新（否则会报"Invalid release entry"）
-      - update-electron-app依赖于app.isPackaged，但官方app.isPackaged判断不准确，需自己写一个判断是否为打包环境，可看下main.js的realProduction
+      - update-electron-app依赖于app.isPackaged，但官方app.isPackaged判断不准确，需自己写一个判断是否为打包环境（可看下main.js的realProduction），在打包环境中手动改动app.isPackaged之后，update-electron-app才能监听到更新
+  - 打包之后，如何查看那些log日志
+    - 在界面点击查看日志文件路径按钮即可查看
       
 ### 知识点记录
   - tag与release分支的区别
