@@ -47,6 +47,8 @@ web_modules/
 # TypeScript cache
 *.tsbuildinfo
 
+package-lock.json
+
 # Optional npm cache directory
 .npm
 
