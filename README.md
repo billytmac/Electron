@@ -1,6 +1,6 @@
 ### 项目介绍: 
   - main分支：搭建一个简易的electron项目
-  - electron-forge：用electron-forge搭建一个简单的用update-electron-app监听仓库realease版本来更新开发  
+  - electron-forge分支：用electron-forge搭建一个简单的用update-electron-app监听仓库realease版本来更新开发  
 
 ### 知识点记录：
   - Electron exposes app.whenReady() as a helper specifically for the ready event to avoid subtle pitfalls with directly listening to that event in particular. See electron/electron#21972 for details.
